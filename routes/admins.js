@@ -2,10 +2,10 @@ const express = require('express');
 const router = express.Router();
 const Admin = require('../models/admin');
 
-// GET all events
+// GET all admins
 router.get('/', async (req, res) => {
-  const events = await Event.find();
-  res.json(events);
+  const admins = await Admin.find();
+  res.json(admins);
 });
 
 router.post('/login', async (req, res) => {
