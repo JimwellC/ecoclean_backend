@@ -13,7 +13,7 @@ app.use(express.json());
 
 app.use('/api/events', eventsRoutes);
 app.use('/api/messages', contactsRoutes);
-app.use('/api/admins', adminRoutes);
+app.use('/api/admin', adminRoutes);
 
 mongoose.connect(process.env.MONGO_URI)
   .then(() => {
