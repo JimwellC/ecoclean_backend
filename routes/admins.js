@@ -2,6 +2,12 @@ const express = require('express');
 const router = express.Router();
 const Admin = require('../models/admin');
 
+// GET all events
+router.get('/', async (req, res) => {
+  const events = await Event.find();
+  res.json(events);
+});
+
 router.post('/login', async (req, res) => {
   const { username, password } = req.body;
 
